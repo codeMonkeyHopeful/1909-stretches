@@ -4,7 +4,17 @@ write the largestDivisible function
 
 */
 
-function largestDivisible(arr, num) {}
+function largestDivisible(arr, num) {
+  const sortedArr = arr.sort((a, b) => {
+    return b - a;
+  });
+  for (let i = 0; i < sortedArr.length; i++) {
+    if (sortedArr[i] % num === 0) {
+      return sortedArr[i];
+    }
+  }
+  return null;
+}
 
 // console.log(largestDivisible([1, 2, 3, 4, 5, 6, 7], 3));//6
 // console.log(largestDivisible([1], 2));//null
