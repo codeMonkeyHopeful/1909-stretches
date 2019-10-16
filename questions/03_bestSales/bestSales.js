@@ -26,6 +26,9 @@ productWhichMadeMostMoney returns an object with an id for that product and a to
 
 //write the productWhichMadeMostMoney function
 
-function bestSales(sales) {}
+function bestSales(sales) {
+  let largestValue = sales[0].amount;
+  let largestIndex = sales[0].productId;
+}
 
 module.exports = { bestSales, sales };
